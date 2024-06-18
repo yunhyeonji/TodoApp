@@ -29,6 +29,10 @@ export const styles = StyleSheet.create({
     padding: 10,
     marginTop: 10,
   },
+  cancelContainer: {
+    backgroundColor: gray.G1,
+    color: gray.G6,
+  },
 });
 
 /** 텍스트 관련 CSS */
@@ -84,12 +88,16 @@ export const BlockBox = styled.View`
 
 export const ListBox = styled(RowView)`
   flex: 1;
+  background-color: ${props => props.theme.white.W1};
   border-color: ${props => props.theme.gray.G2};
   border-width: 1px;
   border-radius: 10px;
-  padding: 10px;
+  padding: 18px 10px 20px 10px;
   margin-vertical: 4px;
-  background-color: ${props => props.theme.white.W1};
+`;
+
+export const ListColumnView = styled(ColumnView)`
+  flex: 6;
 `;
 
 export const DivideLine = styled.View`
