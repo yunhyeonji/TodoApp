@@ -1,9 +1,9 @@
-import {SafeAreaView} from 'react-native';
-import {BaseText, ColumnView} from '../css/css';
+import {SafeAreaView} from 'react-native-safe-area-context';
+import {ColumnView, styles} from '../css/css';
 
 const UserPage = () => {
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.safeArea}>
       <ColumnView></ColumnView>
     </SafeAreaView>
   );

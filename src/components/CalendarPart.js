@@ -1,7 +1,7 @@
 import {Calendar} from 'react-native-calendars';
 import React from 'react';
-import {black, gray} from '../css/color';
 import {styles} from '../css/css';
+import {blue, gray} from '../css/color';
 
 const CalendarPart = ({selectedDate, setSelectedDate}) => {
   return (
@@ -9,18 +9,18 @@ const CalendarPart = ({selectedDate, setSelectedDate}) => {
       style={styles.calendar}
       // 캘린더 내 스타일 수정
       theme={{
-        todayTextColor: black.default,
+        todayTextColor: blue.B4,
         textDayFontSize: 20,
         textDayFontWeight: 'bold',
         textMonthFontSize: 20,
         textMonthFontWeight: 'bold',
-        textSectionTitleColor: 'rgba(138, 138, 138, 1)',
+        textSectionTitleColor: blue.B4,
       }}
       // 현재 날짜 설정
       current={selectedDate}
       // 오늘 날짜 마킹
       markedDates={{
-        [selectedDate]: {selected: true, marked: true, selectedColor: gray.G4},
+        [selectedDate]: {selected: true, marked: true, selectedColor: blue.B2},
       }}
       // 날짜 클릭 시 그 날짜 출력
       onDayPress={day => {

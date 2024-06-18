@@ -1,20 +1,51 @@
 import styled from 'styled-components';
 import {StyleSheet} from 'react-native';
-import {gray} from './color';
+import {gray, white, black} from './color';
 
 export const styles = StyleSheet.create({
+  safeArea: {
+    flex: 1,
+    backgroundColor: white.W2,
+    paddingVertical: 10,
+    paddingHorizontal: 10,
+  },
+  container: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  textContainer: {
+    position: 'absolute',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   calendar: {
-    marginHorizontal: 10,
-    marginVertical: 15,
+    marginTop: 15,
     paddingBottom: 30,
     borderWidth: 1,
     borderColor: gray.G2,
     borderRadius: 20,
   },
+  helloContainer: {
+    padding: 10,
+    marginTop: 10,
+  },
 });
 
 /** 텍스트 관련 CSS */
+export const Header = styled.Text`
+  color: ${props => props.theme.black.B1};
+  background-color: ${props => props.theme.blue.B4};
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: -10px;
+  margin-horizontal: -10px;
+  padding-vertical: 15px;
+  padding-horizontal: 30%;
+`;
+
 export const Title = styled.Text`
+  color: ${props => props.theme.black.B1};
   font-size: 20px;
   font-weight: bold;
   text-align: center;
@@ -22,11 +53,12 @@ export const Title = styled.Text`
 
 export const BaseText = styled.Text`
   font-size: 14px;
-  color: black;
+  color: ${props => props.theme.black.B1};
 `;
 
 export const TitleText = styled(BaseText)`
   font-size: 20px;
+  margin-vertical: 2px;
 `;
 
 /** 뷰 관련 CSS */
@@ -40,12 +72,29 @@ export const ColumnView = styled.View`
   justify-content: center;
 `;
 
+export const BlockBox = styled.View`
+  border-color: ${props => props.theme.gray.G2};
+  background-color: ${props => props.theme.white.W1};
+  border-width: 1px;
+  border-radius: 10px;
+  padding: 10px;
+  margin-horizontal: 3px;
+  width: 47%;
+`;
+
 export const ListBox = styled(RowView)`
+  flex: 1;
   border-color: ${props => props.theme.gray.G2};
   border-width: 1px;
   border-radius: 10px;
   padding: 10px;
-  margin-vertical: 3px;
-  margin-horizontal: 10px;
-  background-color: white;
+  margin-vertical: 4px;
+  background-color: ${props => props.theme.white.W1};
+`;
+
+export const DivideLine = styled.View`
+  border-color: ${props => props.theme.gray.G4};
+  border-width: 1px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 `;
