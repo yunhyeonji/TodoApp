@@ -1,7 +1,9 @@
 import {Calendar} from 'react-native-calendars';
-import React from 'react';
+import React, {useState} from 'react';
 import {styles} from '../css/css';
 import {blue, gray} from '../css/color';
+import {httpGetMethod} from '../RestAPIRequest';
+import {setData, setLoading} from '../user';
 
 const CalendarPart = ({selectedDate, setSelectedDate}) => {
   return (

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {BlockBox, DivideLine, Header, RowView, Title, TitleText, styles} from '../css/css';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import ListPart from '../components/ListPart';
@@ -33,7 +33,6 @@ const HomePage = () => {
 
         {/* 오늘 할 일 리스트 */}
         <ListPart />
-
         {/* 화면이동 버튼 */}
         <NavigationButtons />
       </ThemeProvider>

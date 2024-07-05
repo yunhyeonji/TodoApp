@@ -6,13 +6,14 @@ import ListPart from '../components/ListPart';
 import {DivideLine, styles} from '../css/css';
 import NavigationButtons from '../components/navigationButton';
 import {ThemeProvider} from 'styled-components';
-import {blue, gray, white} from '../css/color';
+import {black, blue, gray, white} from '../css/color';
 
 const MainPage = () => {
   const [selectedDate, setSelectedDate] = useState(dayjs().format('YYYY-MM-DD'));
+
   return (
     <SafeAreaView style={styles.safeArea}>
-      <ThemeProvider theme={{gray, white, blue}}>
+      <ThemeProvider theme={{gray, white, blue, black}}>
         <CalendarPart selectedDate={selectedDate} setSelectedDate={setSelectedDate} />
         <DivideLine />
         <ListPart />
