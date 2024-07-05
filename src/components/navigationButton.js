@@ -1,5 +1,5 @@
 import React from 'react';
-import {TouchableOpacity, Text} from 'react-native';
+import {TouchableOpacity} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {RowView} from '../css/css';
 import Icon from 'react-native-vector-icons/AntDesign';
@@ -24,16 +24,15 @@ const NavigationButtons = () => {
       </TouchableOpacity>
       <TouchableOpacity
         onPress={() => {
-          // navigation.navigate('plus');
-          console.log('plus');
+          navigation.navigate('todo', {type: 'add'});
         }}>
         <Icon name="pluscircleo" size={32} color={gray.G9} />
       </TouchableOpacity>
       <TouchableOpacity
         onPress={() => {
-          navigation.navigate('user');
+          navigation.navigate('more');
         }}>
-        <Icon name="setting" size={32} color={gray.G9} />
+        <Icon name="ellipsis1" size={32} color={gray.G9} />
       </TouchableOpacity>
     </RowView>
   );

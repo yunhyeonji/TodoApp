@@ -28,11 +28,26 @@ export const styles = StyleSheet.create({
   helloContainer: {
     padding: 10,
     marginTop: 10,
+    marginBottom: -10,
   },
   cancelContainer: {
     backgroundColor: gray.G1,
     color: gray.G6,
   },
+  inputContainer: {
+    flexDirection: 'row',
+    marginVertical: 7,
+  },
+  input: {
+    flex: 1,
+    borderColor: gray.G3,
+    borderWidth: 1,
+    padding: 10,
+    height: 50,
+    marginRight: 10,
+    borderRadius: 5,
+  },
+  multi: {height: 110},
 });
 
 /** 텍스트 관련 CSS */
@@ -105,4 +120,12 @@ export const DivideLine = styled.View`
   border-width: 1px;
   margin-top: 10px;
   margin-bottom: 20px;
+`;
+
+export const DivideRowLine = styled.View`
+  border-color: ${props => props.theme.gray.G5};
+  border-width: 1px;
+  padding-vertical: 8px;
+  margin-top: 3px;
+  margin-horizontal: 6px;
 `;
