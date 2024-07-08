@@ -1,9 +1,7 @@
 import {Calendar} from 'react-native-calendars';
-import React, {useState} from 'react';
+import React from 'react';
 import {styles} from '../css/css';
-import {blue, gray} from '../css/color';
-import {httpGetMethod} from '../RestAPIRequest';
-import {setData, setLoading} from '../user';
+import {blue} from '../css/color';
 
 const CalendarPart = ({selectedDate, setSelectedDate}) => {
   return (
@@ -26,7 +24,6 @@ const CalendarPart = ({selectedDate, setSelectedDate}) => {
       }}
       // 날짜 클릭 시 그 날짜 출력
       onDayPress={day => {
-        console.log(day);
         setSelectedDate(day.dateString);
       }}
       // 이전 달, 다음 달 날짜 숨기기
